@@ -6,7 +6,7 @@
   "apps": [
     {
       "root": "src",
-      "outDir": "..\\server\\src\\main\\webapp",
+      "outDir": "..\\XML2019\\src\\main\\webapp",
       "assets": [
         "assets",
         "favicon.ico"
