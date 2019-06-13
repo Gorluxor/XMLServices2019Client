@@ -1,0 +1,27 @@
+<div class="container" style="display: flex; justify-content: center;">
+  <div class="col-md-5 form">
+      <div class="form-area">  
+          <form role="form"  #formPredmet="ngForm">
+          <br style="clear:both">
+                      <h3 style="margin-bottom: 25px; text-align: center;">Predmet</h3>
+              <div class="form-group">
+              <label>Sifra</label>
+              <input type="text" class="form-control"  minlength="3"  maxlength="30" #sifraPredmeta="ngModel" id="sifraPredmeta" name="sifraPredmeta" placeholder="Sifra predmeta" required [(ngModel)] = "newSubject.sifraPredmeta">
+              <small [hidden]="sifraPredmeta.valid || (sifraPredmeta.pristine && !formPredmet.submitted)" class="text-danger">
+                  Sifra je obavezna (minimum 3 karaktera a maksimum 30 karaktera).
+              </small>
+            </div>
+            <div class="form-group">
+              <label>Opis</label>
+              <input type="text" class="form-control" minlength="3" maxlength="30" #opis="ngModel" id="opis" name="opis" placeholder="Opis predmeta" required [(ngModel)] = "newSubject.opis">
+              <small [hidden]="opis.valid || (opis.pristine && !formPredmet.submitted)" class="text-danger">
+                  Opis je obavezan (minimum 3 karaktera a maksimum 30 karaktera).
+              </small>
+            </div>
+            <button  *ngIf="postojiDugme" type="button" [disabled]="!formPredmet.valid" id="submit" name="submit" class="btn btn-primary pull-right" (click)="addSubject()">Dodaj</button>
+            <button *ngIf="!postojiDugme" type="button" [disabled]="!formPredmet.valid" id="submit" name="submit" class="btn btn-primary pull-right" (click)="saveChangesSubject()">Azuriraj</button>
+            <button type="button" id="submit" name="submit" class="btn btn-primary pull-right" (click)="goBack()">Odustani</button>
+          </form>
+      </div>
+  </div>
+  </div>

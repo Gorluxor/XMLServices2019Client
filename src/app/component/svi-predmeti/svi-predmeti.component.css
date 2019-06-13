@@ -1,0 +1,25 @@
+a.list-group-item {
+    height:auto;
+    min-height:250px;
+}
+a.list-group-item{
+    color: black;
+    background-color: aliceblue;
+    border-color: #337ab7;
+    border-radius: 10px;
+    margin: 10px;
+}
+.stars {
+    margin:20px auto 1px;    
+}
+
+.list-group-item-text{
+    color: darkblue !important;
+}
+
+div.centered {
+    position: absolute;
+    margin-left: 700px;
+    margin-top: 70px;
+}
+
